@@ -459,9 +459,6 @@ export const templateBuilder = opts => {
     : defaultIndentOption.value;
   const formatted = formatCode(parsed, indentLevel, indentChars);
 
-  // only wrap output in brackets when it is a list
-  const wrapped = formatted.length > 1 ?
-    wrapperTemplate(formatted.join(", ")) :
-    formatted.join("").trim();
-  return wrapped;
+  const space = whitespace(indentLevel, indentChars);
+  return `${mithrilNodeMultipleChildrenTemplate('div', formatted, space, indentChars)};`;
 };
