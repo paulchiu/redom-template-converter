@@ -14,9 +14,7 @@ describe("Template Builder", function () {
     it("Self-closing single tag", function () {
       var input = "<hr/>";
       var output = templateBuilder({ source: input, indent: "4" });
-      expect(output).to.equal(`
-m("hr")
-`.trim());
+      expect(output).to.equal(`el("hr")`.trim());
     });
 
   });
@@ -27,17 +25,11 @@ m("hr")
       var input = "<span>One</span> <span>Two</span> <span>Three</span>";
       var output = templateBuilder({ source: input, indent: "4" });
       expect(output).to.equal(`
-[
-    m("span", 
-        "One"
-    ), 
-    m("span", 
-        "Two"
-    ), 
-    m("span", 
-        "Three"
-    )
-]`.trim());
+el("div",
+    el("span", "One"), 
+    el("span", "Two"), 
+    el("span", "Three"),
+);`.trim());
     });
   });
 
