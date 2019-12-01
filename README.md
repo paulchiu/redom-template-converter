@@ -12,9 +12,13 @@
 
 ### Set Up and Build
 
+The following assumes you are developing the online converter application. The commands will run the local dev server at `http://0.0.0.0:4000`.
+
 ```
 npm i
 npx lerna bootstrap
+cd packages/app
+npm run dev
 ```
 
 ### App
