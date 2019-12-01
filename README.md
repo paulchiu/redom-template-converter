@@ -12,6 +12,13 @@
 
 ### Set Up and Build
 
+To update the template builder, which contains template generation logic, do:
+
+```
+cd packages/mithril-template-builder
+yarn run build
+```
+
 The following assumes you are developing the online converter application. The commands will run the local dev server at `http://0.0.0.0:4000`.
 
 ```

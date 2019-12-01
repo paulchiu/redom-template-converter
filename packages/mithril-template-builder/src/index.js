@@ -368,7 +368,7 @@ const contentTemplate = (content, whitespace) => (
  * @returns {string}
  */
 const singleMithrilNodeTemplate = (mithrilNode, whitespace) => (
-  `\n${whitespace}m(${mithrilNode})`
+  `\n${whitespace}el(${mithrilNode})`
 );
 
 /**
@@ -379,7 +379,7 @@ const singleMithrilNodeTemplate = (mithrilNode, whitespace) => (
  * @returns {string}
  */
 const mithrilNodeMultipleChildrenTemplate = (mithrilNode, children, whitespace, indentChars) => (
-  `\n${whitespace}m(${mithrilNode},
+  `\n${whitespace}el(${mithrilNode},
 ${whitespace}${indentChars}[${children}
 ${whitespace}${indentChars}]
 ${whitespace})`
@@ -392,7 +392,7 @@ ${whitespace})`
  * @returns {string}
  */
 const mithrilNodeSingleChildTemplate = (mithrilNode, children, whitespace) => (
-  `\n${whitespace}m(${mithrilNode}, ${children}
+  `\n${whitespace}el(${mithrilNode}, ${children}
 ${whitespace})`
 );
 
