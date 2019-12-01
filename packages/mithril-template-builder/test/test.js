@@ -8,9 +8,7 @@ describe("Template Builder", function () {
     it("Unclosed single tag", function () {
       var input = "<p>";
       var output = templateBuilder({ source: input, indent: "4" });
-      expect(output).to.equal(`
-m("p")
-`.trim());
+      expect(output).to.equal(`el("p")`.trim());
     });
 
     it("Self-closing single tag", function () {

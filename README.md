@@ -12,14 +12,14 @@
 
 ### Set Up and Build
 
-To update the template builder, which contains template generation logic, do:
+To compile the template builder library, which contains template generation logic, do:
 
 ```
 cd packages/mithril-template-builder
 yarn run build
 ```
 
-The following assumes you are developing the online converter application. The commands will run the local dev server at `http://0.0.0.0:4000`.
+To compile and run the online converter application on a local dev server at `http://0.0.0.0:4000`, do:
 
 ```
 npm i
@@ -27,6 +27,18 @@ npx lerna bootstrap
 cd packages/app
 npm run dev
 ```
+
+### Testing
+
+To test the template builder library, run:
+
+```
+cd packages/mithril-template-builder
+yarn run build
+yarn run test
+```
+
+To re-run tests, run `yarn run build` again, then refresh the opened testrunner browser window.
 
 ### App
 
