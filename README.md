@@ -1,16 +1,34 @@
 # RE:DOM HTML to JavaScript converter
 
-## Forked from
+## Forked From
 
 [Mithril HTML to JavaScript converter](https://github.com/ArthurClemens/mithril-template-converter)
 
-## Online converter
+## Online Converter
 
 (To do)
 
-## Template Builder
+## Getting Started
 
-Helper function to create Mithril templates from HTML. Use the output text to copy-paste into your source code.
+### Set Up and Build
+
+```
+npm i
+```
+
+### App
+
+Contains source code for the online converter, located in `./packages/app`.
+
+Helper patterns and libraries:
+
+* [Meiosis](http://meiosis.js.org)
+* [Patchinko](https://github.com/barneycarroll/patchinko)
+* [Polythene](http://polythene.js.org)
+
+### Template Builder
+
+Helper function to create Mithril templates from HTML. Use the output text to copy-paste into your source code, located in `./packages/mithril-template-builder`.
 
 ```javascript
 /**
@@ -70,13 +88,3 @@ m('a[href="http://mithril.js.org"]',
     'Mithril'
 )
 ```
-
-## App
-
-Contains source code for the online converter.
-
-Helper patterns and libraries:
-
-* [Meiosis](http://meiosis.js.org)
-* [Patchinko](https://github.com/barneycarroll/patchinko)
-* [Polythene](http://polythene.js.org)
