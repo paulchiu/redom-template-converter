@@ -14,6 +14,7 @@
 
 ```
 npm i
+npx lerna bootstrap
 ```
 
 ### App
