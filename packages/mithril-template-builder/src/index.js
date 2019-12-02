@@ -458,13 +458,5 @@ export const templateBuilder = opts => {
     ? indentOptions[opts.indent].value
     : defaultIndentOption.value;
   const formatted = formatCode(parsed, indentLevel, indentChars);
-
-  // Do not wrap single nodes
-  if (formatted.length <= 1) {
-    return formatted.join('').trim();
-  }
-
-  // Wrap multi-nodes
-  const space = whitespace(indentLevel, indentChars);
-  return `${mithrilNodeMultipleChildrenTemplate('div', formatted, space, indentChars)};`;
+  return formatted.join('').trim();
 };

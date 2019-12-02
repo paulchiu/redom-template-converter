@@ -21,11 +21,10 @@ describe("Template Builder", function () {
 
   describe("Multiple tags", function () {
 
-    it("Multiple spans", function () {
+    it.only("Multiple spans", function () {
       var input = "<span>One</span> <span>Two</span> <span>Three</span>";
       var output = templateBuilder({ source: input, indent: "4" });
-      expect(output).to.equal(`
-el("div",
+      expect(output).to.equal(`el("div",
     el("span", "One"), 
     el("span", "Two"), 
     el("span", "Three"),
